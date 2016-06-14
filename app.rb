@@ -1,6 +1,7 @@
 require 'sinatra'
+require 'bcrypt'
 
-get '/hi' do
-  "Hello World!"
+get '/ip' do
+  "#{request.ip}"
 end
 
