@@ -1,8 +1,11 @@
 require 'sinatra'
+require 'erb'
+include ERB::Util
+
 # require 'bcrypt'
 
 get '/ip' do
   # i love xss
-  "#{request.ip}"
+  html_escape("#{request.ip}")
 end
 
